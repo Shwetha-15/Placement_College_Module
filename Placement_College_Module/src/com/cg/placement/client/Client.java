@@ -9,6 +9,6 @@ public class Client
     {
 		College college = new College();
 		
-		CollegeService service = new CollegeServiceImpl();
+		CollegeServiceImpl service = new CollegeServiceImpl();
 	}
 }
