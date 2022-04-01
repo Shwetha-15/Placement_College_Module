@@ -1,9 +1,11 @@
 package com.cg.placement.entities;
 
+import org.osgi.service.useradmin.User;
+
 public class College 
 {
     private int id;
-    private String collegeAdmin;
+    private User collegeAdmin;
     private String collegename;
     private String location;
     
@@ -13,10 +15,10 @@ public class College
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getCollegeAdmin() {
+	public User getCollegeAdmin() {
 		return collegeAdmin;
 	}
-	public void setCollegeAdmin(String collegeAdmin) {
+	public void setCollegeAdmin(User collegeAdmin) {
 		this.collegeAdmin = collegeAdmin;
 	}
 	public String getCollegename() {

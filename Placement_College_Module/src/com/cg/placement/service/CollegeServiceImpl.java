@@ -48,5 +48,4 @@ public class CollegeServiceImpl implements ICollegeService
 	    dao.commitTransaction();
 		return false;
 	}
-    
 }

@@ -54,6 +54,4 @@ public class CollegeRepositoryImpl implements ICollegeRepository
 	{
 		entityManager.getTransaction().commit();
 	}
-    
-	
 }
