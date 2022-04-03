@@ -1,5 +1,8 @@
 package com.cg.placement.entities;
 
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+
 import org.osgi.service.useradmin.User;
 
 public class College 
@@ -9,6 +12,7 @@ public class College
     private String collegename;
     private String location;
     
+    @OneToMany(mappedBy="college",cascade=CascadeType.ALL)
 	public int getId() {
 		return id;
 	}
