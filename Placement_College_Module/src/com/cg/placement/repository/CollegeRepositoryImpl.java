@@ -36,7 +36,7 @@ public class CollegeRepositoryImpl implements ICollegeRepository
 	}
 
 	@Override
-	public Boolean deleteCollege(int id) 
+	public boolean deleteCollege(int id) 
 	{
 		College college = entityManager.find(College.class, id);
 		entityManager.remove(college);
@@ -53,5 +53,12 @@ public class CollegeRepositoryImpl implements ICollegeRepository
 	public void commitTransaction() 
 	{
 		entityManager.getTransaction().commit();
+	}
+
+	@Override
+	public <Placement> boolean schedulePlacement(Placement placement) 
+	{
+		entityManager.persist(placement);
+		return true;
 	}
 }

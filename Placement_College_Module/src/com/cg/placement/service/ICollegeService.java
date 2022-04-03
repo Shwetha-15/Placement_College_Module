@@ -8,4 +8,8 @@ public interface ICollegeService
     public College updateCollege(College college);
     public College searchCollege(int id);
     public Boolean deleteCollege(int id);
+    public Boolean schedulePlacement(Placement placement);
+    
+    public abstract void beginTransaction();
+    public abstract void commitTransaction();
 }

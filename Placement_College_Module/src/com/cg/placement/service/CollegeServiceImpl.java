@@ -1,5 +1,7 @@
 package com.cg.placement.service;
 
+import javax.persistence.EntityManager;
+
 import com.cg.placement.entities.College;
 import com.cg.placement.repository.ICollegeRepository;
 import com.cg.placement.repository.CollegeRepositoryImpl;
@@ -47,5 +49,26 @@ public class CollegeServiceImpl implements ICollegeService
 	    dao.deleteCollege(id);
 	    dao.commitTransaction();
 		return false;
+	}
+
+	@Override
+	public boolean schedulePlacement(Placement placement) 
+	{
+		dao.beginTransaction();
+	    dao.addCollege(placement);
+	    dao.commitTransaction();
+		return true;
+	}
+
+	@Override
+	public void beginTransaction() 
+	{
+		
+	}
+
+	@Override
+	public void commitTransaction() 
+	{
+		
 	}
 }
