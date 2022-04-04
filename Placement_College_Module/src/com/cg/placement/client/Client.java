@@ -15,7 +15,7 @@ public class Client
 		//Create
 		college.setId(10);
 		college.setCollegename("NMIT");
-		//college.setCollegeAdmin(User);
+		//college.setCollegeAdmin(Akash);
 		college.setLocation("Bangalore");
 		
 		college.setId(11);
@@ -40,6 +40,5 @@ public class Client
 		college = service.searchCollege(11);
 		service.deleteCollege(11);
 		System.out.println("Delete is successful");
-		
 	}
 }

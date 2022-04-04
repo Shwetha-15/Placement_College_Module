@@ -2,7 +2,6 @@ package com.cg.placement.entities;
 
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
-
 import org.osgi.service.useradmin.User;
 
 public class College 

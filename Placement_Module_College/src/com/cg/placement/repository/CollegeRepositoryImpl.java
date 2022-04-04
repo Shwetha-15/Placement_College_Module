@@ -1,19 +1,18 @@
 package com.cg.placement.repository;
 
 import javax.persistence.EntityManager;
+
 import com.cg.placement.entities.College;
-import com.cg.placement.entities.Placement;
 
 public class CollegeRepositoryImpl implements ICollegeRepository
 {
-	//Step 1 : Start JPA Lifecycle
-    private EntityManager entityManager;
-    
+	//Step 1: Start JPA LifeCycle
+	private EntityManager entityManager;
 	public CollegeRepositoryImpl() 
 	{
 		entityManager = JPAUtil.getEntityManager();
 	}
-    
+	
 	//Step 2: create operation - Repo/dao
 	@Override
 	public College addCollege(College college) 
@@ -21,44 +20,35 @@ public class CollegeRepositoryImpl implements ICollegeRepository
 		entityManager.persist(college);
 		return college;
 	}
-
 	@Override
 	public College updateCollege(College college) 
 	{
 		entityManager.merge(college);
 		return college;
 	}
-
 	@Override
-	public College searchCollege(int id) 
+	public College searchCollegeById(int id) 
 	{
-		College college = entityManager.find(College.class, id);
+		College college	= entityManager.find(College.class, id);
 		return college;
 	}
-
 	@Override
-	public boolean deleteCollege(int id) 
+	public College deleteCollegeById(int id) 
 	{
-		College college = entityManager.find(College.class, id);
+		College college	= entityManager.find(College.class, id);
 		entityManager.remove(college);
-		return false;
+		return college;
 	}
-
 	@Override
 	public void beginTransaction() 
 	{
 		entityManager.getTransaction().begin();
+		
 	}
-
 	@Override
 	public void commitTransaction() 
 	{
 		entityManager.getTransaction().commit();
-	}
-
-	@Override
-	public boolean schedulePlacement(Placement placement) 
-	{
-		return false;
+		
 	}
 }
