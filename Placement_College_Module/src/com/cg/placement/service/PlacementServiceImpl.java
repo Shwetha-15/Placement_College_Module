@@ -36,12 +36,12 @@ public class PlacementServiceImpl implements IPlacementService
 			Placement placement = dao.searchPlacement(id);
             return placement;
 		}
-		@Override
-		public Placement cancelPlacement(Placement placement) 
-		{
-			dao.beginTransaction();
-			dao.cancelPlacement(placement);
-			dao.commitTrasaction();
-			return placement;
-		}		
+//		@Override
+//		public Placement cancelPlacement(Placement placement) 
+//		{
+//			dao.beginTransaction();
+//			dao.cancelPlacement(placement);
+//			dao.commitTrasaction();
+//			return placement;
+//		}		
 }

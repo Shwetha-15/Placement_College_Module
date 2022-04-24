@@ -7,5 +7,5 @@ public interface IPlacementService
 	public Placement addPlacement(Placement placement);
 	public Placement updatePlacement(Placement placement);
 	public Placement searchPlacement(int id);
-	public Placement cancelPlacement(Placement placement); 
+//	public Placement cancelPlacement(Placement placement); 
 }

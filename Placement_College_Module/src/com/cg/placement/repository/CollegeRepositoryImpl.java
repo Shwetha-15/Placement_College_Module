@@ -55,10 +55,4 @@ public class CollegeRepositoryImpl implements ICollegeRepository
 	{
 		entityManager.getTransaction().commit();
 	}
-
-	@Override
-	public boolean schedulePlacement(Placement placement) 
-	{
-		return false;
-	}
 }

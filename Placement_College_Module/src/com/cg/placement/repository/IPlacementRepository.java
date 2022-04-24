@@ -10,5 +10,5 @@ public interface IPlacementRepository
 	
     public abstract void beginTransaction();
 	public abstract void commitTrasaction();
-	public Boolean cancelPlacement(Placement placement);
+//	public Boolean cancelPlacement(Placement placement);
 }

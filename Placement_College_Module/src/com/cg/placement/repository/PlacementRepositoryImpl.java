@@ -47,11 +47,11 @@ public class PlacementRepositoryImpl implements IPlacementRepository
 			entityManager.getTransaction().commit();
 		}
 		
-		@Override
-		public Boolean cancelPlacement(Placement placement) 
-		{
-			Placement placement = entityManager.find(Placement.class,id);
-			entityManager.remove(placement);
-			return true;
-		}
+//		@Override
+//		public Boolean cancelPlacement(Placement placement) 
+//		{
+//			Placement placement = entityManager.find(Placement.class,id);
+//			entityManager.remove(placement);
+//			return true;
+//		}
 }
